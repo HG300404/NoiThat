@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <NavigationItems NavigationStyle="Accordion">
+    <Items>
+      <Item Id="KPI" Removed="True" />
+    </Items>
+  </NavigationItems>
+  <Options UIType="SingleWindowSDI" RestoreTabbedMdiLayout="False" ShowTabImage="True" />
+  <SchemaModules>
+    <SchemaModule Name="CloneObjectModule" Version="24.1.6.0" IsNewNode="True" />
+    <SchemaModule Name="SchedulerBlazorModule" Version="24.1.6.0" IsNewNode="True" />
+    <SchemaModule Name="SchedulerModuleBase" Version="24.1.6.0" IsNewNode="True" />
+    <SchemaModule Name="SystemModule" Version="24.1.6.0" IsNewNode="True" />
+  </SchemaModules>
+  <Views>
+    <DetailView Id="Bills_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors" IsCollapsibleGroup="True">
+            <LayoutGroup Id="Bills" IsCollapsibleGroup="True" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="Customers_ListView" InlineEditMode="Batch" />
+  </Views>
+</Application>

@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application Title="NoiThat">
+  <BOModel>
+    <Class Name="DevExpress.Persistent.BaseImpl.PermissionPolicy.PermissionPolicyUser" Caption="Base User" />
+  </BOModel>
+  <Options>
+    <LayoutManagerOptions RequiredFieldMark="*" />
+  </Options>
+  <SchemaModules>
+    <SchemaModule Name="CloneObjectModule" Version="24.1.6.0" IsNewNode="True" />
+    <SchemaModule Name="SchedulerModuleBase" Version="24.1.6.0" IsNewNode="True" />
+    <SchemaModule Name="SystemModule" Version="24.1.6.0" IsNewNode="True" />
+  </SchemaModules>
+  <Views>
+    <ListView Id="ApplicationUser_ListView" Caption="Users" />
+    <ListView Id="Bills_BillDetails_ListView" IsFooterVisible="True">
+      <Columns>
+        <ColumnInfo Id="Price">
+          <Summary>
+            <ColumnSummaryItem Id="Summary0" SummaryType="Sum" IsNewNode="True" />
+          </Summary>
+        </ColumnInfo>
+      </Columns>
+    </ListView>
+    <DetailView Id="Bills_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="31.47792706333973">
+            <LayoutGroup Id="Bills" Caption="Hoá đơn bán hàng" RelativeSize="100">
+              <LayoutGroup Id="Bills_col1" RelativeSize="33.295583238958095">
+                <LayoutItem Id="Customer" RelativeSize="28.333333333333332" />
+                <LayoutItem Id="Employee" RelativeSize="21.666666666666668" />
+                <LayoutItem Id="PaymentMethod" ViewItem="PaymentMethod" Index="2" RelativeSize="21.666666666666668" IsNewNode="True" />
+                <LayoutItem Id="ProductPrice" RelativeSize="15.116279069767442" Index="3" Removed="True" />
+                <LayoutItem Id="ShippingPrice" RelativeSize="17.80821917808219" Index="3" Removed="True" />
+                <LayoutItem Id="TotalAmount" RelativeSize="28.333333333333332" Index="3" />
+                <LayoutItem Id="Deposit" RelativeSize="17.171717171717173" Index="6" Removed="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="Bills_col2" RelativeSize="66.7044167610419" Caption="Bills_col2" Direction="Horizontal">
+                <LayoutGroup Id="Auto0625cc48-ca4c-42e0-ad14-6d11cccdb8eb" ShowCaption="False" Caption="" Index="0" RelativeSize="49.9151103565365" IsNewNode="True">
+                  <LayoutItem Id="Type" ViewItem="Type" Index="0" RelativeSize="28.333333333333332" IsNewNode="True" />
+                  <LayoutItem Id="Interest" ViewItem="Interest" Index="1" RelativeSize="21.666666666666668" IsNewNode="True" />
+                  <LayoutItem Id="Tax" ViewItem="Tax" Index="2" RelativeSize="21.666666666666668" IsNewNode="True" />
+                  <LayoutItem Id="Deposit" ViewItem="Deposit" Index="3" RelativeSize="28.333333333333332" IsNewNode="True" />
+                </LayoutGroup>
+                <LayoutItem Id="Interest" RelativeSize="13.6" Index="0" Removed="True" />
+                <LayoutItem Id="Tax" RelativeSize="17.171717171717173" Index="0" Removed="True" />
+                <LayoutItem Id="Type" ViewItem="Type" Index="0" RelativeSize="39.05191873589165" Removed="True" />
+                <LayoutGroup Id="Autodf05a65c-9475-403a-94bc-605fb292e3a5" ShowCaption="False" Caption="" Index="1" RelativeSize="50.0848896434635" IsNewNode="True">
+                  <LayoutItem Id="ProductPrice" ViewItem="ProductPrice" Index="0" RelativeSize="28.333333333333332" IsNewNode="True" />
+                  <LayoutItem Id="ShippingPrice" ViewItem="ShippingPrice" Index="1" RelativeSize="21.666666666666668" IsNewNode="True" />
+                  <LayoutItem Id="Time" ViewItem="Time" Index="2" RelativeSize="21.666666666666668" IsNewNode="True" />
+                  <LayoutItem Id="CreatedAt" ViewItem="CreatedAt" Index="3" RelativeSize="28.333333333333332" IsNewNode="True" />
+                </LayoutGroup>
+                <LayoutItem Id="CreatedAt" RelativeSize="73.21428571428571" Index="1" Removed="True" />
+                <LayoutItem Id="Time" RelativeSize="10.4" Index="1" Removed="True" />
+                <LayoutItem Id="PaymentMethod" RelativeSize="19.767441860465116" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="BillDetails_Group" Direction="Vertical" RelativeSize="68.52207293666027" Caption="Danh sách sản phẩm">
+            <LayoutItem Id="BillDetails" RelativeSize="100" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+</Application>
